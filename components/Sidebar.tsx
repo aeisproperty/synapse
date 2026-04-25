@@ -5,7 +5,7 @@ type View = 'dashboard' | 'kanban' | 'finance' | 'ai' | 'settings';
 
 interface SidebarProps {
   activeView: View;
-  onNavigate: (view: View) => void;
+  onViewChange: (view: View) => void;
 }
 
 const navItems = [
@@ -16,7 +16,7 @@ const navItems = [
   { id: 'settings', label: 'Settings', icon: Settings },
 ];
 
-const Sidebar = ({ activeView, onNavigate }: SidebarProps) => {
+const Sidebar = ({ activeView, onViewChange }: SidebarProps) => {
   return (
     <div className="w-60 h-full bg-[#FBFBFA] border-r border-gray-200 flex flex-col py-6 px-3 shrink-0">
       {/* Logo */}
