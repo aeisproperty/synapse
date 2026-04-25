@@ -35,7 +35,7 @@ const Sidebar = ({ activeView, onViewChange }: SidebarProps) => {
           return (
             <button
               key={item.id}
-              onClick={() => onNavigate(item.id as View)}
+              onClick={() => onViewChange(item.id as View)}
               className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors w-full text-left ${
                 isActive
                   ? 'bg-gray-200 text-[#37352F]'
