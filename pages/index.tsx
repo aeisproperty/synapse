@@ -8,6 +8,20 @@ import BurnoutAlert from '../components/BurnoutAlert';
 import Settings from '../components/Settings';
 import { calculateBurnoutRisk, BurnoutStatus } from '../lib/engine';
 
+declare global {
+  interface Window {
+    Android?: {
+      playAudioReminder: (message: string) => void;
+    };
+  }
+}declare global {
+  interface Window {
+    Android?: {
+      playAudioReminder: (message: string) => void;
+    };
+  }
+}
+
 export default function SynapseApp() {
   const [currentView, setCurrentView] = useState('editor');
   const [burnoutStatus, setBurnoutStatus] = useState<BurnoutStatus | null>(null);
