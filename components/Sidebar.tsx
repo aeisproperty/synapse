@@ -1,11 +1,11 @@
 import React from 'react';
 import { LayoutDashboard, KanbanSquare, Wallet, Sparkles, Settings, Zap } from 'lucide-react';
 
-type View = 'dashboard' | 'kanban' | 'finance' | 'ai' | 'settings';
+type View = string;
 
 interface SidebarProps {
-  activeView: View;
-  onViewChange: (view: View) => void;
+  activeView: string;
+  onViewChange: (view: string) => void;
 }
 
 const navItems = [
